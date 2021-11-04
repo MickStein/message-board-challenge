@@ -9,6 +9,10 @@ class Message_Board < Sinatra::Base
     erb :index
   end
 
+  get '/posts' do
+    erb :posts
+  end
+
   post '/posts' do
     @name = params[:name]
     @password = params[:password]
